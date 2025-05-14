@@ -1,120 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hidayah Bashir Dayyib | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --dark-bg: #1a1a1a;
+            --accent: #2ecc71;
+            --light-text: #ecf0f1;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left Side Navigation */
+        .sidebar {
+            width: 300px;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            padding: 2rem;
+            position: fixed;
+            height: 100%;
+            border-right: 2px solid var(--accent);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: block;
+            border: 3px solid var(--accent);
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 1.5rem 0;
+        }
+
+        .nav-menu a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 300px;
+            padding: 3rem;
+            background: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .button-group {
+            margin: 2rem 0;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            margin: 0 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            margin: 2rem 0;
+            padding: 2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark-bg);
+            color: var(--light-text);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: static;
+                height: auto;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .nav-toggle {
+                display: block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Minimal Header Navigation -->
-  <header class="main-nav">
-    <div class="nav-brand">Hidayah Bashir Dayyib</div>
-    <nav class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <img src="profile.jpg" alt="Your Name" class="profile-img">
+        <h2>Your Name</h2>
+        <p>Data Analyst | Cloud Architect</p>
+        
+        <button class="nav-toggle">☰</button>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight">Hidayah Bashir Dayyib</span></h1>
-      <p class="subtitle">Data Analyst | BI Developer | AI/ML Enthusiast</p>
-      <div class="cta-group">
-        <a href="#projects" class="cta-button">View Projects</a>
-        <a href="#contact" class="cta-button outline">Get in Touch</a>
-      </div>
-    </div>
-  </section>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <h1>Hi, I'm <span>Your Name</span></h1>
+            <p>Senior Data Scientist | Cloud Solutions Architect</p>
+            <div class="button-group">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn">Get in Touch</a>
+            </div>
+        </section>
 
-  <!-- Skills Grid -->
-  <section id="skills" class="section">
-    <h2 class="section-title">Technical Expertise</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <i class="fas fa-chart-line"></i>
-        <h3>Data Analysis</h3>
-        <ul>
-          <li>Python/Pandas</li>
-          <li>SQL</li>
-          <li>Power BI/Tableau</li>
-        </ul>
-      </div>
-      <div class="skill-card">
-        <i class="fas fa-cloud"></i>
-        <h3>Cloud & BI</h3>
-        <ul>
-          <li>Azure</li>
-          <li>ETL Pipelines</li>
-          <li>DAX/Power Query</li>
-        </ul>
-      </div>
-      <!-- Add more skill cards -->
-    </div>
-  </section>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Background</h3>
+                    <p>Experience description...</p>
+                </div>
+                <!-- Repeat for other skill cards -->
+            </div>
+        </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Featured Projects</h2>
-    
-    <!-- Project 1 -->
-    <article class="project-card">
-      <div class="project-image">
-        <img src="images/project1.jpg" alt="Customer Segmentation">
-      </div>
-      <div class="project-content">
-        <div class="project-header">
-          <h3>Retail Customer Segmentation</h3>
-          <div class="project-links">
-            <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
-            <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
-          </div>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Project Title</h3>
+                <p>Project description...</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>AWS</span>
+                </div>
+                <div class="project-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <!-- Repeat project cards -->
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <a href="mailto:you@email.com"><i class="fas fa-envelope"></i> you@email.com</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Your Name. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
-        <p class="project-description">
-          Implemented RFM analysis and ML clustering to drive targeted marketing strategies, 
-          resulting in 22% retention improvement.
-        </p>
-        <div class="tech-stack">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Power BI</span>
-          <span class="tech-tag">Clustering</span>
-        </div>
-      </div>
-    </article>
+    </footer>
 
-    <!-- Repeat for other projects -->
-  </section>
+    <script>
+        // Toggle mobile navigation
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="contact-container">
-      <h2 class="section-title">Let's Connect</h2>
-      <div class="contact-grid">
-        <a href="mailto:hudaelbasheer15@gmail.com" class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <span>hudaelbasheer15@gmail.com</span>
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" class="contact-card">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn Profile</span>
-        </a>
-        <a href="https://github.com/hudaelbasheer" class="contact-card">
-          <i class="fab fa-github"></i>
-          <span>GitHub Portfolio</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Hidayah Bashir Dayyib. All rights reserved.</p>
-  </footer>
-
-  <script src="scripts/app.js"></script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
+  </html>body>
   </html>
