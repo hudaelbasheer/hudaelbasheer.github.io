@@ -319,3 +319,36 @@ footer {
         font-size: 1.5rem;
     }
   }
+
+/* Section Scroll Fix */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Button Interaction Fix */
+.btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #25a25a !important; /* Darker accent */
+}
+
+.btn-outline:hover {
+    background: rgba(46, 204, 113, 0.1);
+}
