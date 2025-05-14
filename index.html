@@ -1,134 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Add SEO Optimization -->
-  <meta name="description" content="Hidayah Bashir Dayyib | Certified Data Analyst | Python, SQL, Power BI Expert">
-  <title>Hidayah Bashir Dayyib - Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Add Font Awesome for icons -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidayah Bashir Dayyib | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- Sticky Navigation (Now Functional) -->
-  <nav class="sticky-nav">
-    <div class="nav-brand">H.B. Dayyib</div>
-    <div class="nav-links">
-      <a href="#home" class="active">Home</a>
+  <!-- Minimal Header Navigation -->
+  <header class="main-nav">
+    <div class="nav-brand">Hidayah Bashir Dayyib</div>
+    <nav class="nav-links">
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- Hero Section (Home) -->
-  <section id="home" class="active-section">
-    <header class="hero">
-      <img src="images/profile.png" alt="Hidayah Profile" class="hero-img">
-      <h1>Hidayah Bashir Dayyib</h1>
-      <p class="tagline">Data Analyst | BI Developer | Insights Storyteller</p>
-      <a href="resume.pdf" class="cta-button" download>
-        <i class="fas fa-file-pdf"></i> Download Resume
-      </a>
-    </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Hidayah Bashir Dayyib</span></h1>
+      <p class="subtitle">Data Analyst | BI Developer | AI/ML Enthusiast</p>
+      <div class="cta-group">
+        <a href="#projects" class="cta-button">View Projects</a>
+        <a href="#contact" class="cta-button outline">Get in Touch</a>
+      </div>
+    </div>
   </section>
 
-  <!-- Projects Section (Hidden by Default) -->
-  <section id="projects" class="hidden-section">
-    <h2>Featured Projects</h2>
+  <!-- Skills Grid -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Technical Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Data Analysis</h3>
+        <ul>
+          <li>Python/Pandas</li>
+          <li>SQL</li>
+          <li>Power BI/Tableau</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud & BI</h3>
+        <ul>
+          <li>Azure</li>
+          <li>ETL Pipelines</li>
+          <li>DAX/Power Query</li>
+        </ul>
+      </div>
+      <!-- Add more skill cards -->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Featured Projects</h2>
     
-    <!-- Project 1 - Fixed Structure -->
+    <!-- Project 1 -->
     <article class="project-card">
       <div class="project-image">
         <img src="images/project1.jpg" alt="Customer Segmentation">
       </div>
-      <div class="project-details">
-        <h3>Retail Customer Segmentation</h3>
-        <div class="project-metrics">
-          <div class="metric">
-            <i class="fas fa-chart-line"></i>
-            <span>15% Cost Reduction</span>
-          </div>
-          <div class="metric">
-            <i class="fas fa-clock"></i>
-            <span>200 Hours Saved/Month</span>
+      <div class="project-content">
+        <div class="project-header">
+          <h3>Retail Customer Segmentation</h3>
+          <div class="project-links">
+            <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
         <p class="project-description">
-          Implemented RFM analysis and machine learning clustering to identify high-value customer segments, 
-          resulting in targeted marketing strategies that improved retention by 22%.
+          Implemented RFM analysis and ML clustering to drive targeted marketing strategies, 
+          resulting in 22% retention improvement.
         </p>
         <div class="tech-stack">
-          <i class="fab fa-python"></i>
-          <i class="fas fa-database"></i>
-          <i class="fas fa-chart-bar"></i>
-          <span>Python | SQL | Power BI</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Power BI</span>
+          <span class="tech-tag">Clustering</span>
         </div>
-        <a href="https://github.com/hudaelbasheer/Customer-Segmentation-analysis" 
-           class="project-link"
-           target="_blank">
-          <i class="fas fa-external-link-alt"></i> View Full Analysis
-        </a>
       </div>
     </article>
 
-    <!-- Project 2 - Fixed Image Path -->
-    <article class="project-card">
-      <div class="project-image">
-        <img src="images/sales-forecasting.jpg" alt="Sales Forecasting"> <!-- Path remains unchanged -->
-      </div>
-      <div class="project-details">
-        <h3>Sales & Inventory Optimization</h3>
-        <div class="project-metrics">
-          <div class="metric">
-            <i class="fas fa-percentage"></i>
-            <span>98% Forecast Accuracy</span>
-          </div>
-          <div class="metric">
-            <i class="fas fa-box-open"></i>
-            <span>30% Stock Reduction</span>
-          </div>
-        </div>
-        <p class="project-description">
-          Developed ARIMA-based forecasting model that reduced overstock by 30% while maintaining 
-          99% product availability across 15 retail locations.
-        </p>
-        <div class="tech-stack">
-          <i class="fab fa-python"></i>
-          <i class="fas fa-chart-line"></i>
-          <i class="fas fa-robot"></i>
-          <span>Python | Prophet | Power BI</span>
-        </div>
-        <a href="https://github.com/hudaelbasheer/sales-inventory-optimization" 
-           class="project-link"
-           target="_blank">
-          <i class="fas fa-external-link-alt"></i> View Code Repository
-        </a>
-      </div>
-    </article>
+    <!-- Repeat for other projects -->
   </section>
 
-  <!-- Contact Section (Always Visible) -->
-  <section id="contact">
+  <!-- Contact Section -->
+  <section id="contact" class="section">
     <div class="contact-container">
-      <h2>Get in Touch</h2>
-      <div class="contact-methods">
-        <a href="mailto:hudaelbasheer15@gmail.com" class="contact-link email">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-grid">
+        <a href="mailto:hudaelbasheer15@gmail.com" class="contact-card">
           <i class="fas fa-envelope"></i>
           <span>hudaelbasheer15@gmail.com</span>
         </a>
-        
-        <a href="https://linkedin.com/in/yourprofile" 
-           class="contact-link linkedin"
-           target="_blank">
+        <a href="https://linkedin.com/in/yourprofile" class="contact-card">
           <i class="fab fa-linkedin"></i>
           <span>LinkedIn Profile</span>
         </a>
-
-        <a href="https://github.com/hudaelbasheer" 
-           class="contact-link github"
-           target="_blank">
+        <a href="https://github.com/hudaelbasheer" class="contact-card">
           <i class="fab fa-github"></i>
           <span>GitHub Portfolio</span>
         </a>
@@ -141,7 +115,6 @@
     <p>© 2025 Hidayah Bashir Dayyib. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="scripts/app.js"></script>
 </body>
-</html>
+  </html>
