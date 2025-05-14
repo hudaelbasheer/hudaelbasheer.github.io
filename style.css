@@ -123,3 +123,18 @@ body {
     --light: #2d3436;
   }
 }
+
+/* Add to style.css */
+section:not(.active-section) {
+  display: none !important;
+}
+
+.active-section {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
