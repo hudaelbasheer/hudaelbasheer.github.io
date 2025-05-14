@@ -1,261 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hidayah Bashir Dayyib | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* ===== Base Styles ===== */
-        :root {
-            --dark-bg: #1A1A1A;
-            --accent: #2ecc71;
-            --light-text: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', system-ui;
-        }
-
-        body {
-            background: #FFFFFF;
-        }
-
-        /* ===== Top Navigation ===== */
-        .top-nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--dark-bg);
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--light-text);
-            z-index: 1000;
-        }
-
-        .nav-brand {
-            color: var(--light-text);
-            font-weight: 600;
-        }
-
-        .hamburger {
-            color: var(--light-text);
-            font-size: 1.8rem;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        /* ===== Mobile Menu ===== */
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            background: var(--dark-bg);
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu a {
-            display: block;
-            color: var(--light-text);
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-
-        .mobile-menu a:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        /* ===== Hero Section ===== */
-        .hero {
-            padding: 120px 5% 60px;
-            background: var(--dark-bg);
-            text-align: center;
-            color: var(--light-text);
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin-bottom: 2rem;
-            border: 3px solid var(--accent);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #bdc3c7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--dark-bg);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--accent);
-            color: var(--accent);
-        }
-
-        /* ===== About Section ===== */
-        .about {
-            padding: 4rem 5%;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .skill-card {
-            background: #FFFFFF;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .skill-card h3 {
-            color: var(--dark-bg);
-            margin-bottom: 1rem;
-        }
-
-        /* ===== Projects Section ===== */
-        .projects {
-            padding: 4rem 5%;
-            background: #f8f9fa;
-        }
-
-        .project-card {
-            background: #FFFFFF;
-            border-radius: 10px;
-            margin: 2rem auto;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 1200px;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-        }
-
-        .tag {
-            background: var(--dark-bg);
-            color: var(--light-text);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* ===== Contact Section ===== */
-        .contact {
-            padding: 4rem 5%;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: var(--dark-bg);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        /* ===== Footer ===== */
-        footer {
-            background: var(--dark-bg);
-            color: var(--light-text);
-            padding: 2rem 5%;
-            text-align: center;
-        }
-
-        /* ===== Mobile Responsive ===== */
-        @media (max-width: 768px) {
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .project-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .mobile-menu {
-                top: 70px;
-                right: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
     <!-- Mobile Menu -->
     <div class="mobile-menu">
         <a href="#home">Home</a>
@@ -271,8 +25,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="profile.png" alt="Hidayah Bashir Dayyib" class="profile-img">
+    <section class="hero" id="home">
+        <img src="profile.png" alt="Hidayah Bashir Dayyib" class="profile-img" />
         <h1>Hi, I'm Hidayah Bashir Dayyib</h1>
         <p>Senior Data Analyst | BI Developer | AI/ML Enthusiast</p>
         <div class="cta-buttons">
@@ -282,7 +36,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="about">
         <h2 class="section-title">Technical Expertise</h2>
         <div class="skills-grid">
             <div class="skill-card">
@@ -305,7 +59,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects">
+    <section class="projects" id="projects">
         <h2 class="section-title">Featured Projects</h2>
         <div class="project-card">
             <div class="project-header">
@@ -325,7 +79,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2 class="section-title">Let's Connect</h2>
         <div class="social-links">
             <a href="mailto:hudaelbasheer15@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -344,39 +98,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const mobileMenu = document.querySelector('.mobile-menu');
-
-            // Toggle Menu
-            hamburger.addEventListener('click', (e) => {
-                e.stopPropagation();
-                mobileMenu.classList.toggle('active');
-            });
-
-            // Close Menu When Clicking Outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
-                    mobileMenu.classList.remove('active');
-                }
-            });
-
-            // Smooth Scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    mobileMenu.classList.remove('active');
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-                </html>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </html>
