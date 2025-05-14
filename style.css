@@ -1,8 +1,3 @@
-/* style.css */
-/* ===== Google Font ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* ===== Base Styles ===== */
 :root {
     --dark-bg: #1A1A1A;
     --accent: #2ecc71;
@@ -18,10 +13,13 @@
 
 body {
     background: #FFFFFF;
-    line-height: 1.6;
 }
 
-/* ===== Top Navigation ===== */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Top Navigation */
 .top-nav {
     position: fixed;
     top: 0;
@@ -38,7 +36,6 @@ body {
 .nav-brand {
     color: var(--light-text);
     font-weight: 600;
-    font-size: 1.2rem;
 }
 
 .hamburger {
@@ -46,10 +43,9 @@ body {
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 1001;
-    padding: 0 15px;
 }
 
-/* ===== Mobile Menu ===== */
+/* Mobile Menu */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -60,10 +56,17 @@ body {
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
 }
 
 .mobile-menu.active {
     display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .mobile-menu a {
@@ -79,7 +82,7 @@ body {
     background: rgba(255,255,255,0.1);
 }
 
-/* ===== Hero Section ===== */
+/* Hero */
 .hero {
     padding: 120px 5% 60px;
     background: var(--dark-bg);
@@ -93,7 +96,6 @@ body {
     border-radius: 50%;
     margin-bottom: 2rem;
     border: 3px solid var(--accent);
-    object-fit: cover;
 }
 
 .hero h1 {
@@ -111,7 +113,6 @@ body {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .btn {
@@ -120,7 +121,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    text-align: center;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -128,12 +129,20 @@ body {
     color: var(--dark-bg);
 }
 
+.btn-primary:hover {
+    background: #25a25a;
+}
+
 .btn-outline {
     border: 2px solid var(--accent);
     color: var(--accent);
 }
 
-/* ===== About Section ===== */
+.btn-outline:hover {
+    background: rgba(46, 204, 113, 0.1);
+}
+
+/* About */
 .about {
     padding: 4rem 5%;
 }
@@ -142,7 +151,6 @@ body {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: var(--dark-bg);
 }
 
 .skills-grid {
@@ -163,19 +171,9 @@ body {
 .skill-card h3 {
     color: var(--dark-bg);
     margin-bottom: 1rem;
-    font-size: 1.3rem;
 }
 
-.skill-card ul {
-    list-style: none;
-}
-
-.skill-card li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-/* ===== Projects Section ===== */
+/* Projects */
 .projects {
     padding: 4rem 5%;
     background: #f8f9fa;
@@ -197,24 +195,9 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.project-header h3 {
-    color: var(--dark-bg);
-    font-size: 1.4rem;
-}
-
 .project-links {
     display: flex;
     gap: 1rem;
-}
-
-.project-links a {
-    color: var(--dark-bg);
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.project-links a:hover {
-    color: var(--accent);
 }
 
 .tech-tags {
@@ -232,7 +215,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* ===== Contact Section ===== */
+/* Contact */
 .contact {
     padding: 4rem 5%;
     text-align: center;
@@ -251,11 +234,7 @@ body {
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-    color: var(--accent);
-}
-
-/* ===== Footer ===== */
+/* Footer */
 footer {
     background: var(--dark-bg);
     color: var(--light-text);
@@ -263,31 +242,10 @@ footer {
     text-align: center;
 }
 
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.footer-links a {
-    color: var(--light-text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--accent);
-}
-
-/* ===== Mobile Responsive ===== */
+/* Mobile */
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 100px 5% 40px;
     }
 
     .hero h1 {
@@ -304,51 +262,4 @@ footer {
         top: 70px;
         right: 10px;
     }
-
-    .btn {
-        width: 100%;
     }
-}
-
-@media (max-width: 480px) {
-    .nav-brand {
-        font-size: 1rem;
-    }
-
-    .hamburger {
-        font-size: 1.5rem;
-    }
-  }
-
-/* Section Scroll Fix */
-section {
-    scroll-margin-top: 100px;
-}
-
-/* Mobile Menu Animation */
-.mobile-menu {
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-}
-
-.mobile-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* Button Interaction Fix */
-.btn {
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background: #25a25a !important; /* Darker accent */
-}
-
-.btn-outline:hover {
-    background: rgba(46, 204, 113, 0.1);
-}
