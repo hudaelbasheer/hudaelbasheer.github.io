@@ -1,107 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Hidayah Bashir Dayyib | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hidayah Bashir Dayyib | Portfolio</title>
+<style>
+  /* Reset & basics */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0; padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  /* Sticky nav */
+  nav {
+    position: sticky;
+    top: 0;
+    background: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 999;
+  }
+  nav .brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  /* Nav links */
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    border-color: #1db954; /* Spotify green as example */
+  }
+
+  /* Hamburger - hidden on desktop */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+  }
+
+  /* Mobile menu */
+  @media (max-width: 768px) {
+    nav ul {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      background: #222;
+      flex-direction: column;
+      width: 200px;
+      height: calc(100% - 60px);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      padding-top: 2rem;
+    }
+    nav ul.show {
+      transform: translateX(0);
+    }
+    nav ul li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  /* Sections styling */
+  section {
+    padding: 5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  section:nth-child(even) {
+    background: #f7f7f7;
+  }
+  section h2 {
+    margin-bottom: 1.5rem;
+    color: #222;
+  }
+  section p {
+    line-height: 1.6;
+    color: #444;
+  }
+</style>
 </head>
 <body>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
+<nav>
+  <div class="brand">Hidayah B. Dayyib</div>
+  <div class="hamburger" id="hamburger">
+    <div></div><div></div><div></div>
+  </div>
+  <ul id="nav-links">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-        <div class="nav-brand">Hidayah B. Dayyib | Portfolio</div>
-        <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-        </div>
-    </nav>
+<section id="home">
+  <h2>Welcome</h2>
+  <p>Hi, I’m Hidayah Bashir Dayyib — a data analyst passionate about uncovering actionable insights from data.</p>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <img src="profile.png" alt="Hidayah Bashir Dayyib" class="profile-img" />
-        <h1>Hi, I'm Hidayah Bashir Dayyib</h1>
-        <p>Senior Data Analyst | BI Developer | AI/ML Enthusiast</p>
-        <div class="cta-buttons">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-outline">Get in Touch</a>
-        </div>
-    </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>With experience in business intelligence and data storytelling, I help organizations make informed decisions.</p>
+</section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Data Analysis</h3>
-                <ul>
-                    <li>Python/Pandas</li>
-                    <li>SQL</li>
-                    <li>Power BI/Tableau</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Business Intelligence</h3>
-                <ul>
-                    <li>ETL Pipelines</li>
-                    <li>DAX/Power Query</li>
-                    <li>Data Storytelling</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Some featured projects include customer segmentation, sales forecasting, and data visualization dashboards.</p>
+</section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Retail Customer Segmentation</h3>
-                <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <p>Implemented RFM analysis and ML clustering to drive targeted marketing strategies...</p>
-            <div class="tech-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Power BI</span>
-                <span class="tag">Clustering</span>
-            </div>
-        </div>
-    </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Reach me via email or LinkedIn to discuss data projects or collaborations.</p>
+</section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Let's Connect</h2>
-        <div class="social-links">
-    <a href="mailto:hudaelbasheer15@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/hidayah-bashir-dayyib-16a7351b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/hudaelbasheer" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    </section>
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Hidayah Bashir Dayyib. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </footer>
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
-    <script src="script.js"></script>
+  // Close mobile menu on link click
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+
+  // Scrollspy to highlight nav link based on scroll position
+  const sections = document.querySelectorAll('section');
+  const navItems = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80; // offset for nav height
+      const sectionHeight = section.clientHeight;
+      if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
+        current = section.getAttribute('id');
+      }
+    });
+
+    navItems.forEach(link => {
+      link.classList.remove('active');
+      if(link.getAttribute('href') === `#${current}`){
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
 </body>
     </html>
