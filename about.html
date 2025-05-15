@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Hidayah Bashir Dayyib</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* === MOBILE FIRST STYLES === */
+        :root {
+            --primary: #e75480;
+            --primary-dark: #b03060;
+            --bg: #fff0f5;
+            --bg-light: #ffffff;
+            --text: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-light);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 56px;
+            left: -100%;
+            width: 100%;
+            background: var(--bg-light);
+            padding: 1rem;
+            transition: 0.3s;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 1rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+
+        /* About Page Content */
+        .about-page {
+            padding: 6rem 1rem 2rem;
+        }
+
+        .section-title {
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-duration {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievements li {
+            margin: 0.8rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .achievements li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .skill-category h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: rgba(231, 84, 128, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 768px) {
+            .nav-links {
+                position: static;
+                display: flex;
+                gap: 2rem;
+                background: transparent;
+                padding: 0;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            .about-page {
+                padding: 8rem 2rem 4rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .timeline-item {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">H.B.Dayyib</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger">☰</button>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <main class="about-page">
+        <h2 class="section-title">Professional Journey</h2>
+
+        <!-- Experience Timeline -->
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>🏥 Bebeji Dental Clinic</h3>
+                <p class="timeline-duration">Junior Data Analyst | April 2021 - October 2023</p>
+                <ul class="achievements">
+                    <li>Reduced patient wait times by 15% through Excel-based scheduling analysis</li>
+                    <li>Implemented Power BI dashboard for treatment success rate tracking</li>
+                    <li>Automated monthly reporting workflows saving 10+ hours/month</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🖼️ NY Egypt Gallery Co.</h3>
+                <p class="timeline-duration">Data Analyst | November 2023 - June 2024</p>
+                <ul class="achievements">
+                    <li>Increased sales by 18% through customer segmentation analysis</li>
+                    <li>Reduced marketing spend waste by 12% using Tableau insights</li>
+                    <li>Developed SQL-driven inventory optimization system</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>📊 Data Visualization</h3>
+                <ul class="skill-list">
+                    <li>Power BI</li>
+                    <li>Tableau</li>
+                    <li>Excel Dashboards</li>
+                    <li>Matplotlib</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🛠 Data Engineering</h3>
+                <ul class="skill-list">
+                    <li>SQL Optimization</li>
+                    <li>ETL Processes</li>
+                    <li>BigQuery</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🤖 Advanced Analytics</h3>
+                <ul class="skill-list">
+                    <li>Python (Pandas)</li>
+                    <li>Predictive Modeling</li>
+                    <li>A/B Testing</li>
+                    <li>K-Means Clustering</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <h2 class="section-title">Education & Certifications</h2>
+        <div class="timeline-item">
+            <h3>🎓 BSc Computer Applications</h3>
+            <p class="timeline-duration">Hindustan Institute of Science & Technology | 2022-2025</p>
+            <ul class="achievements">
+                <li>Specialization: Data Analytics</li>
+                <li>Key Courses: Machine Learning, Database Systems, Advanced Python</li>
+            </ul>
+            
+            <h3 style="margin-top: 1.5rem;">📜 Certifications</h3>
+            <ul class="achievements">
+                <li>Google Data Analytics Professional Certificate</li>
+                <li>DataCamp SQL Associate</li>
+                <li>Microsoft Power BI Certified</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
