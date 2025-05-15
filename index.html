@@ -1,52 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hidayah Bashir Dayyib | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidayah Bashir Dayyib | Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff5fa;
+      color: #333;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f2e6f4;
+    }
+    .navbar .logo {
+      font-weight: 600;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      color: #7d3c98;
+      font-weight: 500;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #fbefff;
+    }
+    .hero h1 {
+      color: #7d3c98;
+    }
+    .hero-buttons a {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn {
+      background: #7d3c98;
+      color: #fff;
+    }
+    .btn-outline {
+      border: 2px solid #7d3c98;
+      color: #7d3c98;
+    }
+    .about-snapshot {
+      padding: 2rem;
+      text-align: center;
+    }
+    .learn-more {
+      color: #7d3c98;
+      text-decoration: underline;
+    }
+    .contact-section {
+      padding: 2rem;
+      background: #fff;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 500;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .btn-submit {
+      background: #7d3c98;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #f2e6f4;
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Hidayah B. Dayyib</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+  <header class="navbar">
+    <div class="logo">Hidayah Bashir Dayyib | <span>Data Analyst</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>  <section class="hero" id="hero" data-aos="fade-up">
+    <h1>Data-Driven Insights. Actionable Results.</h1>
+    <p>Helping businesses make smarter decisions through data analytics.</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/profile-placeholder.png" alt="Hidayah Bashir Dayyib" style="max-width: 200px; border-radius: 50%; margin-top: 2rem;">
+    </div>
+  </section>  <section id="about" class="about-snapshot" data-aos="fade-right">
+    <p>I'm a data analyst passionate about translating raw data into strategic insights that drive business success.</p>
+    <a href="#" class="learn-more">Learn More →</a>
+  </section>  <section id="contact" class="contact-section" data-aos="fade-up">
+    <h2>Get in Touch</h2>
+    <p>Have a question or a project in mind? Reach out below!</p>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+    <p id="formSuccess" class="success-message"></p>
+  </section>  <footer>
+    <p>© 2025 Hidayah Bashir Dayyib. All rights reserved.</p>
+    <p>Quick Links: About | Projects | Blog | Contact</p>
+    <p>Connect: GitHub | LinkedIn | Email</p>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>  <script>
+    AOS.init();
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Empowering businesses with data-driven decisions.</h1>
-            <p>Hi, I’m Hidayah Bashir Dayyib — a data analyst passionate about uncovering actionable insights from data.</p>
-            <div class="hero-buttons">
-                <a href="portfolio.html" class="btn btn-primary">View Portfolio</a>
-                <a href="resume.html" class="btn btn-outline">Download Resume</a>
-                <a href="contact.html" class="btn btn-outline">Contact Me</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Hidayah Bashir Dayyib. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("formSuccess").textContent = "Message sent successfully!";
+    });
+  </script></body>
+    </html>
