@@ -234,114 +234,7 @@
   </header>
 
   <!-- Hero Section -->
- <section class="hero" id="hero">
-  <div class="hero-image">
-    <img src="images/profile.png" alt="Hidayah Bashir Dayyib" loading="lazy" />
-  </div>
-  <div class="hero-text">
-    <h1>Hi, I’m Hidayah Bashir Dayyib</h1>
-    <p> Data Analyst | Business Intelligence Specialist | Data Visualization Expert.</p>
-    <div class="btn-group">
-      <a href="#projects" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        View My Work
-      </a>
-      <a href="#contact" class="btn-outline">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2z"/></svg>
-        Get in Touch
-      </a>
-    </div>
-  </div>
-</section>
-
-<style>
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-  }
-
-  .hero-image img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(231, 84, 128, 0.2);
-    margin-bottom: 30px;
-    animation: fadeIn 1.2s ease forwards;
-  }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-    margin-bottom: 16px;
-    color: var(--primary-dark);
-    line-height: 1.3;
-  }
-
-  .hero-text p {
-    font-size: 1.05rem;
-    color: var(--text);
-    line-height: 1.6;
-    margin-bottom: 28px;
-    max-width: 90%;
-  }
-
-  .btn-group {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .btn, .btn-outline {
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 12px 24px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .btn {
-    background-color: var(--primary-dark);
-    color: white;
-    border: none;
-  }
-
-  .btn:hover {
-    background-color: var(--primary);
-  }
-
-  .btn-outline {
-    border: 2px solid var(--primary-dark);
-    color: var(--primary-dark);
-    background: transparent;
-  }
-
-  .btn-outline:hover {
-    background-color: var(--primary-dark);
-    color: white;
-  }
-
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+ <section 
 
   /* --- Mobile Responsive Fix for Button Group --- */
   @media (max-width: 768px) {
@@ -358,12 +251,104 @@
 </style>
 
 <!-- About Section -->
-<section id="about" style="padding: var(--section-padding); max-width: var(--max-width); margin: 0 auto;">
-  <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 20px; text-align: center;">About Me</h2>
-  <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; text-align: center; color: #555;">
-    I am a dedicated Data Analyst with experience in data cleaning, visualization, and storytelling. My passion lies in transforming raw data into meaningful insights that help businesses make data-driven decisions. I am proficient in SQL, Python, Power BI, and Excel, and continuously learning advanced analytics techniques to provide value.
-  </p>
+<section class="hero" id="hero">
+  <div class="hero-image">
+    <img src="images/profile.png" alt="Hidayah Bashir Dayyib" loading="lazy" />
+  </div>
+  <div class="hero-text">
+    <h1>Hi, I’m Hidayah Bashir Dayyib</h1>
+    <p>A passionate Data Analyst skilled in turning complex data into actionable insights to drive business decisions and growth.</p>
+    <div class="btn-group">
+      <a href="#projects" class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        View My Work
+      </a>
+      <a href="#contact" class="btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2z"/></svg>
+        Get in Touch
+      </a>
+    </div>
+  </div>
 </section>
+
+<style>
+  .hero {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(231, 84, 128, 0.2);
+    margin-bottom: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    margin-bottom: 16px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .btn, .btn-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .btn {
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+  }
+
+  .btn:hover {
+    background-color: var(--primary);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-dark);
+    color: var(--primary-dark);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--primary-dark);
+    color: white;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+          </style>
+  
 
 <!-- Skills Section -->
 <section id="skills" style="background: white; padding: var(--section-padding); max-width: var(--max-width); margin: 60px auto;">
