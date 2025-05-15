@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hidayah Bashir Dayyib | Data Analyst</title>
+  <title>Hidayah Bashir Dayyib | Data Analyst Portfolio</title>
   <style>
     :root {
       --primary: #e75480;
@@ -13,7 +13,6 @@
       --section-padding: 60px 20px;
       --max-width: 1000px;
     }
-
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -22,8 +21,6 @@
       line-height: 1.6;
       scroll-behavior: smooth;
     }
-
-    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -37,13 +34,11 @@
       max-width: var(--max-width);
       margin: 0 auto;
     }
-
     .logo {
       font-weight: 600;
       font-size: 20px;
       color: var(--primary-dark);
     }
-
     .nav-links {
       list-style: none;
       display: flex;
@@ -51,7 +46,6 @@
       margin: 0;
       padding: 0;
     }
-
     .nav-links li a {
       text-decoration: none;
       color: var(--text);
@@ -59,11 +53,9 @@
       font-size: 16px;
       transition: color 0.3s ease;
     }
-
     .nav-links li a:hover {
       color: var(--primary-dark);
     }
-
     .hamburger {
       display: none;
       font-size: 28px;
@@ -72,8 +64,6 @@
       cursor: pointer;
       color: var(--primary-dark);
     }
-
-    /* Hero */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -83,23 +73,19 @@
       margin: 80px auto 60px;
       padding: 0 20px;
     }
-
     .hero-text {
       flex: 1 1 500px;
     }
-
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 20px;
       color: var(--primary-dark);
     }
-
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 30px;
       max-width: 450px;
     }
-
     .btn, .btn-outline {
       display: inline-block;
       padding: 12px 25px;
@@ -112,241 +98,32 @@
       transition: background-color 0.3s ease, color 0.3s ease;
       border: none;
     }
-
     .btn {
       background-color: var(--primary-dark);
       color: white;
     }
-
     .btn:hover {
       background-color: var(--primary);
     }
-
     .btn-outline {
       border: 2px solid var(--primary-dark);
       background: transparent;
       color: var(--primary-dark);
     }
-
     .btn-outline:hover {
       background-color: var(--primary-dark);
       color: white;
     }
-
     .hero-image {
       flex: 1 1 300px;
       max-width: 300px;
       margin-top: 20px;
       text-align: center;
     }
-
     .hero-image img {
       width: 100%;
       border-radius: 12px;
     }
-
-    /* Sections common */
-    section {
-      max-width: var(--max-width);
-      margin: 0 auto 80px;
-      padding: var(--section-padding);
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-
-    h2.section-title {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: var(--primary-dark);
-      text-align: center;
-    }
-
-    /* About */
-    #about p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    /* Skills */
-    #skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-    }
-
-    .skill {
-      background: var(--bg);
-      padding: 20px;
-      border-radius: 10px;
-      width: 180px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      font-weight: 600;
-      color: var(--primary-dark);
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .skill:hover {
-      background-color: var(--primary-dark);
-      color: white;
-    }
-
-    /* Projects */
-    #projects .project-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .project-card {
-      background: var(--bg);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-
-    .project-title {
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--primary-dark);
-    }
-
-    .project-desc {
-      flex-grow: 1;
-      margin-bottom: 15px;
-    }
-
-    .project-link {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    .project-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Blog */
-    #blog .blog-list {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .blog-post {
-      margin-bottom: 30px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 20px;
-    }
-
-    .blog-post h3 {
-      color: var(--primary-dark);
-      margin-bottom: 8px;
-    }
-
-    .blog-post p {
-      color: #555;
-    }
-
-    /* Contact */
-    .contact-section form {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-      font-family: inherit;
-      resize: vertical;
-    }
-
-    textarea {
-      min-height: 120px;
-    }
-
-    .btn-submit {
-      background-color: var(--primary-dark);
-      color: white;
-      border: none;
-      padding: 14px 30px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
-      display: inline-block;
-    }
-
-    .btn-submit:hover {
-      background-color: var(--primary);
-    }
-
-    .error-message {
-      color: crimson;
-      font-size: 14px;
-      margin-top: 5px;
-      display: none;
-    }
-
-    .success-message {
-      color: green;
-      font-size: 16px;
-      margin-top: 15px;
-      text-align: center;
-      font-weight: 600;
-    }
-
-    /* Back to top */
-    #backToTop {
-      position: fixed;
-      bottom: 40px;
-      right: 30px;
-      background-color: var(--primary-dark);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      font-size: 22px;
-      padding: 12px 18px;
-      cursor: pointer;
-      display: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      z-index: 10000;
-      transition: background-color 0.3s ease;
-    }
-
-    #backToTop:hover {
-      background-color: var(--primary);
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -373,9 +150,6 @@
         flex: none;
         max-width: 100%;
       }
-      #skills {
-        justify-content: center;
-      }
     }
   </style>
 </head>
@@ -384,6 +158,155 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Hidayah Bashir Dayyib</div>
-    <button class="hamburger" id="hamburger
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+  </header>
 
-      
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Hi, I’m Hidayah Bashir Dayyib</h1>
+      <p>A passionate Data Analyst skilled in turning complex data into actionable insights to drive business decisions and growth.</p>
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/300x300.png?text=Your+Photo" alt="Hidayah Bashir Dayyib" />
+    </div>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+<!-- About Section -->
+<section id="about" style="padding: var(--section-padding); max-width: var(--max-width); margin: 0 auto;">
+  <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 20px; text-align: center;">About Me</h2>
+  <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; text-align: center; color: #555;">
+    I am a dedicated Data Analyst with experience in data cleaning, visualization, and storytelling. My passion lies in transforming raw data into meaningful insights that help businesses make data-driven decisions. I am proficient in SQL, Python, Power BI, and Excel, and continuously learning advanced analytics techniques to provide value.
+  </p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" style="background: white; padding: var(--section-padding); max-width: var(--max-width); margin: 60px auto;">
+  <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 40px; text-align: center;">My Skills</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 900px; margin: 0 auto;">
+    <div style="flex: 1 1 180px; background: var(--bg); padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">SQL</h3>
+      <p>Expertise in writing complex queries, optimizing performance, and data automation.</p>
+    </div>
+    <div style="flex: 1 1 180px; background: var(--bg); padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">Python</h3>
+      <p>Data analysis with pandas, visualization with matplotlib & seaborn, and automation scripting.</p>
+    </div>
+    <div style="flex: 1 1 180px; background: var(--bg); padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">Power BI</h3>
+      <p>Building interactive dashboards and data storytelling to communicate insights effectively.</p>
+    </div>
+    <div style="flex: 1 1 180px; background: var(--bg); padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">Excel</h3>
+      <p>Advanced formulas, pivot tables, macros, and data visualization techniques.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" style="padding: var(--section-padding); max-width: var(--max-width); margin: 60px auto;">
+  <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 40px; text-align: center;">Featured Projects</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto;">
+    
+    <div style="background: var(--bg); border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">Customer Segmentation Using RFM Analysis</h3>
+      <p>Analyzed customer purchase behavior to segment clients into distinct groups for targeted marketing using RFM model and Power BI dashboards.</p>
+      <a href="https://github.com/hudaelbasheer/customer-segmentation" target="_blank" style="color: var(--primary-dark); font-weight: 700; text-decoration: none;">View on GitHub &rarr;</a>
+    </div>
+
+    <div style="background: var(--bg); border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">Sales Data Dashboard</h3>
+      <p>Developed an interactive dashboard to visualize monthly sales trends, product performance, and forecast future sales using Power BI.</p>
+      <a href="https://github.com/hudaelbasheer/sales-dashboard" target="_blank" style="color: var(--primary-dark); font-weight: 700; text-decoration: none;">View on GitHub &rarr;</a>
+    </div>
+
+    <div style="background: var(--bg); border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">E-commerce Keyword Analytics Tool</h3>
+      <p>Built a keyword analytics tool to track product popularity on social media, helping local businesses optimize their marketing strategy.</p>
+      <a href="https://github.com/hudaelbasheer/keyword-analytics-tool" target="_blank" style="color: var(--primary-dark); font-weight: 700; text-decoration: none;">View on GitHub &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Blog Section -->
+<section id="blog" style="background: var(--bg-light); padding: var(--section-padding); max-width: var(--max-width); margin: 60px auto;">
+  <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 40px; text-align: center;">Latest Blog Posts</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; max-width: 900px; margin: 0 auto;">
+
+    <article style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); flex: 1 1 280px;">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">Data Storytelling: How to Make Your Data Speak</h3>
+      <p style="color: #555;">Learn the art of crafting compelling stories from raw data to engage your audience and drive decision-making.</p>
+      <a href="/blog/data-storytelling" style="color: var(--primary-dark); font-weight: 700; text-decoration: none;">Read More &rarr;</a>
+    </article>
+
+    <article style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); flex: 1 1 280px;">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">Power BI Dashboard Design Tips</h3>
+      <p style="color: #555;">Explore best practices for creating clear, interactive, and visually appealing Power BI dashboards.</p>
+      <a href="/blog/powerbi-design-tips" style="color: var(--primary-dark); font-weight: 700; text-decoration: none;">Read More &rarr;</a>
+    </article>
+
+    <article style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); flex: 1 1 280px;">
+      <h3 style="color: var(--primary); margin-bottom: 12px;">SQL Joins Explained with Real Business Examples</h3>
+      <p style="color: #555;">A beginner-friendly guide to understanding SQL joins using practical scenarios from the business world.</p>
+      <a href="/blog/sql-joins" style="color: var(--primary-dark); font-weight: 700; text-decoration: none;">Read More &rarr;</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" style="padding: var(--section-padding); max-width: var(--max-width); margin: 60px auto;">
+  <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 40px; text-align: center;">Get in Touch</h2>
+  <form action="mailto:your.email@example.com" method="post" enctype="text/plain" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+    <label for="name" style="font-weight: 600; color: var(--primary-dark);">Name</label>
+    <input type="text" id="name" name="name" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;">
+
+    <label for="email" style="font-weight: 600; color: var(--primary-dark);">Email</label>
+    <input type="email" id="email" name="email" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;">
+
+    <label for="message" style="font-weight: 600; color: var(--primary-dark);">Message</label>
+    <textarea id="message" name="message" rows="5" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;"></textarea>
+
+    <button type="submit" style="background: var(--primary); color: white; padding: 14px; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1.1rem;">Send Message</button>
+  </form>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer style="background: var(--primary-dark); color: white; padding: 30px 20px; text-align: center; margin-top: 60px;">
+  <p style="margin: 0;">© 2025 Hidayah Bashir Dayyib. All rights reserved.</p>
+  <div style="margin-top: 10px;">
+    <a href="https://www.linkedin.com/in/hidayah-bashir-dayyib-16a7351b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: white; margin: 0 10px; text-decoration: none; font-weight: 600;">LinkedIn</a>
+    <a href="https://github.com/hudaelbasheer" target="_blank" style="color: white; margin: 0 10px; text-decoration: none; font-weight: 600;">GitHub</a>
+    <a href="mailto hudaelbasheer15@gmail.com" style="color: white; margin: 0 10px; text-decoration: none; font-weight: 600;">Email</a>
+  </div>
+</footer>
