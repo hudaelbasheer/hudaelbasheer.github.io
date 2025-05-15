@@ -147,7 +147,70 @@
         text-align: center;
       }
       .hero-text, .hero-image {
-        flex: none;
+   
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn {
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+  }
+  .btn:hover {
+    background-color: var(--primary);
+  }
+
+  .btn-outline {
+    border: 2px solid var(--primary-dark);
+    color: var(--primary-dark);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background-color: var(--primary-dark);
+    color: white;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+  }
+
+  .hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(231, 84, 128, 0.3);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 0.5s;
+  }
+
+  /* Animations */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+    </style     flex: none;
         max-width: 100%;
       }
     }
@@ -171,7 +234,10 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
+ <section class="hero" id="hero">
+  <div class="hero-image">
+    <img src="images/profile.png" alt="Hidayah Bashir Dayyib" loading="lazy" />
+  </div>
   <div class="hero-text">
     <h1>Hi, I’m Hidayah Bashir Dayyib</h1>
     <p>A passionate Data Analyst skilled in turning complex data into actionable insights to drive business decisions and growth.</p>
@@ -185,9 +251,6 @@
         Get in Touch
       </a>
     </div>
-  </div>
-  <div class="hero-image">
-    <img src="images/profile.png" alt="Hidayah Bashir Dayyib" loading="lazy" />
   </div>
 </section>
 
@@ -214,8 +277,9 @@
     }
   }
 
+  /* Animate text sliding in from right (since text is now second) */
   .hero-text {
-    animation: fadeSlideIn 1s ease forwards;
+    animation: fadeSlideInRight 1s ease forwards;
   }
 
   .hero-text h1 {
@@ -286,10 +350,10 @@
   }
 
   /* Animations */
-  @keyframes fadeSlideIn {
+  @keyframes fadeSlideInRight {
     from {
       opacity: 0;
-      transform: translateX(-40px);
+      transform: translateX(40px);
     }
     to {
       opacity: 1;
@@ -302,7 +366,7 @@
       opacity: 1;
     }
   }
-    </style
+</style>
 
 
 
