@@ -243,11 +243,11 @@
     <p>A passionate Data Analyst skilled in turning complex data into actionable insights to drive business decisions and growth.</p>
     <div class="btn-group">
       <a href="#projects" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
         View My Work
       </a>
       <a href="#contact" class="btn-outline">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2z"/></svg>
         Get in Touch
       </a>
     </div>
@@ -265,19 +265,16 @@
     margin: auto;
   }
 
-  /* Responsive stack on mobile */
-  @media (max-width: 768px) {
-    .hero {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 30px;
-    }
-    .hero-image {
-      justify-self: center;
-    }
+  .hero-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(231, 84, 128, 0.3);
+    animation: fadeIn 1.5s ease forwards 0.5s;
   }
 
-  /* Animate text sliding in from right (since text is now second) */
   .hero-text {
     animation: fadeSlideInRight 1s ease forwards;
   }
@@ -299,6 +296,7 @@
 
   .btn-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
@@ -307,7 +305,7 @@
     font-size: 1rem;
     padding: 12px 24px;
     border-radius: 8px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
@@ -317,7 +315,6 @@
   .btn {
     background-color: var(--primary-dark);
     color: white;
-    border: none;
   }
   .btn:hover {
     background-color: var(--primary);
@@ -328,6 +325,7 @@
     color: var(--primary-dark);
     background: transparent;
   }
+
   .btn-outline:hover {
     background-color: var(--primary-dark);
     color: white;
@@ -337,16 +335,6 @@
     width: 20px;
     height: 20px;
     stroke: currentColor;
-  }
-
-  .hero-image img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(231, 84, 128, 0.3);
-    opacity: 0;
-    animation: fadeIn 1.5s ease forwards 0.5s;
   }
 
   /* Animations */
@@ -366,9 +354,37 @@
       opacity: 1;
     }
   }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-image {
+      order: 1;
+      justify-self: center;
+      margin-bottom: 20px;
+    }
+
+    .hero-text {
+      order: 2;
+    }
+
+    .btn-group {
+      justify-content: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+    }
+  }
 </style>
-
-
 
 <!-- About Section -->
 <section id="about" style="padding: var(--section-padding); max-width: var(--max-width); margin: 0 auto;">
