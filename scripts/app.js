@@ -1,7 +1,21 @@
-23// Select hamburger and mobile menu
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
+document.addEventListener('DOMContentLoaded', () => {
+    const navMenu = document.querySelector('.nav-menu');
+    const navIcon = document.querySelector('.nav-icon');
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
+    navIcon.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navIcon.querySelector('i').classList.toggle('fa-bars');
+        navIcon.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if(navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navIcon.querySelector('i').classList.add('fa-bars');
+                navIcon.querySelector('i').classList.remove('fa-times');
+            }
+        });
+    });
 });
