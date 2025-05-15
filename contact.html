@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hidayah Bashir Dayyib</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* === MOBILE FIRST STYLES === */
+        :root {
+            --primary: #e75480;
+            --primary-dark: #b03060;
+            --bg: #fff0f5;
+            --bg-light: #ffffff;
+            --text: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* Navigation - Same Structure */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-light);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 56px;
+            left: -100%;
+            width: 100%;
+            background: var(--bg-light);
+            padding: 1rem;
+            transition: 0.3s;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 1rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+
+        /* Contact Page Styles */
+        .contact-page {
+            padding: 6rem 1rem 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .contact-form {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background: var(--primary-dark);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background: var(--primary);
+        }
+
+        .social-section {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            background: var(--primary-dark);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 768px) {
+            .nav-links {
+                position: static;
+                display: flex;
+                gap: 2rem;
+                background: transparent;
+                padding: 0;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            .contact-page {
+                padding: 8rem 2rem 4rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: start;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">H.B.Dayyib</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="hamburger">☰</button>
+        </div>
+    </nav>
+
+    <!-- Contact Content -->
+    <main class="contact-page">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <h2>Send a Message</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- Social Links -->
+            <div class="social-section">
+                <h2>Direct Contact</h2>
+                <div class="social-links">
+                    <a href="mailto:hudaelbasheer15@gmail.com" class="social-link" target="_blank">
+                        ✉️
+                    </a>
+                    <a href="https://www.linkedin.com/in/hidayah-bashir-dayyib-16a7351b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank">
+                        💼
+                    </a>
+                    <a href="https://github.com/hudaelbasheer/" class="social-link" target="_blank">
+                        👩💻
+                    </a>
+                </div>
+                <p style="margin-top: 1rem;">Prefer direct contact? Reach out via email or social media!</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Form Handling
+        const form = document.querySelector('form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                } else {
+                    alert('Oops! Something went wrong.');
+                }
+            } catch (error) {
+                alert('Error sending message. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
